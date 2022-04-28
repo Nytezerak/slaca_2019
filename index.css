@@ -78,7 +78,7 @@ main{
     display: flex;
     background-color: #FDF1EB;
     height: 68px;
-    width: 100vw;
+    width: auto;
     padding-left: 36px;
     position: relative;
 }
