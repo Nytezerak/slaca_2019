@@ -78,7 +78,7 @@ main{
     display: flex;
     background-color: #FDF1EB;
     height: 68px;
-    width: auto;
+
     padding-left: 36px;
     position: relative;
 }
@@ -96,7 +96,7 @@ main{
 }
 
 .dropdown{
-    margin: 18px 3% 0 10%;
+    margin: 18px 3% 0 5%;
     z-index: 1;
 }
 
@@ -125,7 +125,7 @@ main{
 
 .welcome{
     position: absolute;
-    padding-left: 64%;
+    padding-left: 78%;
     z-index: 0;
     display: inline-flex;
 }
@@ -167,6 +167,7 @@ main{
 
 .mainBodyRight{
     margin-right: 20px;
+    margin-top: 0px;
     width: 28%;
     float: right;
 }
@@ -209,12 +210,15 @@ main{
     font-weight: 500;
     font-size: 14px;
     line-height: 179%; 
-    float: right;
+    float: left;
+    
 
-    text-align: right;
+    text-align: left;
     letter-spacing: 0.05em;
-    color: #ED7839;
+
 }
+
+
 
 ul li{
     list-style: none;
@@ -222,15 +226,28 @@ ul li{
 
 .details{
     float: right;
-    
+    height: 410px;
+
     border: 1px solid #ECECEC;
     box-sizing: border-box;
     border-radius: 3px 3px 0px 0px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    /* or 14px */
+
+    letter-spacing: 0.02em;
+
+    color: #5C5C5C;
+
 }
 
 .detailsHeader{
     background: #FDF1EB;
     padding: 11px 15px 9px 15px;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -240,6 +257,24 @@ ul li{
 
     display: flex;
     align-items: center;
+}
 
-    color: #4E4E4E;
+
+.detailsText{
+    overflow-y: scroll; 
+    height: 364px;
+    padding: 15px 15px 0 15px;
+    margin-bottom: 15px;
+}
+
+.detailsText ul{
+    padding: 0;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: left;
+
+    letter-spacing: 0.02em;
 }
