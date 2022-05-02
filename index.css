@@ -469,7 +469,7 @@ ul li{
 }
 */
 .mobileDpdPlusWelcome{
-    display: ruby;
+    display: -webkit-inline-box;
 }
 
 .footerLogo{
