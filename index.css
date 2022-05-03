@@ -88,6 +88,13 @@ main{
     margin: 0 0 0 240px;
 }
 
+.defaultMargin{
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .topBar{
     background-color: #FDF1EB;
     height: 68px;
@@ -339,7 +346,7 @@ ul li{
 }
 
 .bodyArticleText{
-    padding: 15px;
+    margin: auto 5%;
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
@@ -376,6 +383,7 @@ ul li{
 .bodyArticleButtonDiv{
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 .textDecoration{
@@ -400,12 +408,11 @@ ul li{
 }
 
 .newTopic{
-    margin: 15px 15px 0 15px;
+    margin-top: 15px;
     padding: 17px 25px;
     border: 1px solid #E7E7E7;
     box-sizing: border-box;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
 }
 
 .newTopicName{
@@ -440,8 +447,27 @@ ul li{
     width: 15%;
 }
 
+.newTopicInsert{
+    width: 100%;
+}
+
+.newTopicInsert input{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.newTopicInsert textarea{
+    height: 90px;
+    resize: none;
+    width: 100%;
+}
+
 .topicIcon{
     color: #ED7839;
+}
+
+.fa-heart{
+    padding: 3px 6px;
 }
 
 .heart{
@@ -581,9 +607,3 @@ ul li{
 
 
 }
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f7aee74997b9e5dd70ba4b8d02d0b3191bbf21a1
