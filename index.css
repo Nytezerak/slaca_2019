@@ -316,6 +316,7 @@ ul li{
     letter-spacing: 0.02em;
 }
 
+
 .bodyArticleBox{
     border: 1px solid #ECECEC;
     box-sizing: border-box;
@@ -353,7 +354,7 @@ ul li{
     font-size: 14px;
     line-height: 23px;
     letter-spacing: 0.02em;
-
+    padding-bottom: 15px;
     color: #5C5C5C;
 }
 
@@ -381,19 +382,23 @@ ul li{
 }
 
 .bodyArticleButtonDiv{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hrStyle{
+    width: 100%;
+border: 1px solid #E7E7E7;
+margin: -16px 0 32px 0;
 }
 
 .textDecoration{
-    cursor: pointer;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    display: none;
     text-decoration: none;
 
     color: #ED7839;
@@ -415,18 +420,81 @@ ul li{
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
 }
 
+.blurTopic{
+    position: relative;
+}
+
+.blurTopic>*{
+    filter: blur(2px);
+}
+
+.blurTopic::after{
+    content:' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #DDDDDD;
+    opacity: 0.5;
+    filter: none;
+}
+
 .newTopicName{
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 15px;
     /* identical to box height */
 
 
-    color: #ED7839;
+    color: #5C5C5C;
 
     margin-bottom: 10px;
+}
+.pointer{
+    cursor: pointer;
+}
+.commentBlock{
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 0px;
+    display: none;
+}
+
+.commentBlock.mostrar{
+    display: block;
+}
+
+.commentBlock div{
+    padding: 7px;
+
+    background: #F8F8F8;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 0px;
+}
+
+.commentBlockInative{
+    display: none;
+}
+
+
+
+.autor{
+    background: #F8F8F8;
+}
+
+.question{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #4D4D4D;
 }
 
 .newTopicQuestion{
@@ -440,6 +508,8 @@ ul li{
 
     margin-bottom: 11px;
 }
+
+
 
 .newTopicIcons{
     display: flex;
@@ -478,6 +548,15 @@ ul li{
     border-radius: 2px;
 }
 
+
+.thankYou{
+    text-align: center;
+    margin-bottom: 16px;
+    display: none;
+}
+
+
+
 .textoEscondido{
     display:none;
 }
@@ -502,6 +581,18 @@ ul li{
     width: 100%;
     text-align: right;
 }
+
+.greyBorder{
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+#newTopic{
+    display: none;
+}
+
 
 @media screen and (min-width:1258px) {
     .menuButton{
