@@ -134,50 +134,26 @@
     <div class="bodyArticleBox">
         <p class="bodyArticleHeader">Discussões</p>
             <div class="bodyArticleText ">
-            <p class="textDecoration">Compartilhe suas ideias ou dúvidas com os autores!</p>
-            <div class="bodyArticleIcons">
-                <img src="./img/icone1.png">
-                <img src="./img/icone2.png">
-                <img src="./img/icone3.png">
-            </div>
-            <p style="padding-top: 35px;">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
-            
-            <section id="thankYou" class="thankYou">
-                <p class="textDecoration">Seu tópico foi enviado com sucesso! :D</p>
-                <p class="newTopicQuestion">
-                    Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!
-                </p>
-                <a class="newTopicQuestion pointer">
-                    Descubra outros trabalhos!
-                </a>
-            </section>
-
-
-            <div class="bodyArticleButtonDiv">
-                <button class="bodyArticleButton">
-                    <img src="./img/plusIcon.svg"> criar tópico
-                </button>
-            </div>
-            <hr class="hrStyle">
-
             <section>
-                <div class="newTopic blurTopic">
-                    <p class="textDecoration pointer">Assunto da pergunta aparece aqui</p>
-                    <p class="newTopicName pointer">Carlos Henrique Santos</p>
-                    <p class="newTopicQuestion pointer">
-                        Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo?
-                    </p>
-                    <div class="newTopicIcons">
-                        <div class="topicIcon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
-                        <div class="topicIcon heart"><i class="fa-solid fa-heart"></i></div>
-                        <p>1 like</p>
-                        <p>1 resposta</p>
-                    </div>
+                <p class="textDecoration">Compartilhe suas ideias ou dúvidas com os autores!</p>
+                <div class="bodyArticleIcons">
+                    <img src="./img/icone1.png">
+                    <img src="./img/icone2.png">
+                    <img src="./img/icone3.png">
                 </div>
-                
+                <p style="padding-top: 35px;">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
+                <div class="bodyArticleButtonDiv">
+                    <button class="bodyArticleButton">
+                        <img src="./img/plusIcon.svg"> criar tópico
+                    </button>
+                </div>
+                <hr class="hrStyle">
             </section>
 
+                        
+          
             
+    <!--Bloco para enviar um novo tópico para avaliação-->
             <section id="newTopic">
                 <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
                 <div class="newTopicInsert">
@@ -191,9 +167,49 @@
                     <label for="content" class="newTopicName">Conteúdo</label>
                     <br>
                     <textarea id="content" name="content" class="greyBorder"></textarea>
+                    
+                    <div class="topBarP bodyArticleIcons">
+                        <div>
+                            <img src="./img/bold.svg">
+                            <img src="./img/italic.svg">
+                        </div>
+                        <button onclick="newTopic()" class="bodyArticleButton">Enviar</button>
+                    </div>
                 </div>
             </section>
 
+            <!--Bloco de enviado com sucesso-->
+                <section id="thankYou" class="thankYou">
+                    <p class="textDecoration">Seu tópico foi enviado com sucesso! :D</p>
+                    <p class="newTopicQuestion">
+                        Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!
+                    </p>
+                    <a href="https://galoa.com.br/" class="newTopicQuestion pointer">
+                        Descubra outros trabalhos!
+                    </a>
+    
+                    <div id="bluredTopic">
+                    <div class="newTopic blurTopic">
+                        <p class="textDecoration pointer">Assunto da pergunta aparece aqui</p>
+                        <p class="newTopicName pointer">Carlos Henrique Santos</p>
+                        <p class="newTopicQuestion pointer">
+                            Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo?
+                        </p>
+                        <div class="newTopicIcons">
+                            <div class="topicIcon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                            <div class="topicIcon heart"><i class="fa-solid fa-heart"></i></div>
+                            <p>1 like</p>
+                            <p>1 resposta</p>
+                        </div>
+                    </div>
+                    <div class="waitingFeedback">
+                        <img src="./img/confirmed.svg">
+                        <p>Aguardando feedback dos autores</p>
+                        <li>Editar tópico</li>
+                    </div>
+                </div>
+                </section>
+    <!--Bloco de perguntas com respostas-->
             <div class="newTopic pointer" onclick="answerMe()">
                 <p class="textDecoration pointer">Assunto da pergunta aparece aqui</p>
                 <p class="newTopicName pointer">Carlos Henrique Santos</p>
@@ -285,10 +301,17 @@
     }
 
     const itens = document.querySelectorAll('.newTopic')
+    console.log('NewTopic ok!')
     itens.forEach(item => {
     const filho = item.querySelector('.topic2')
     item.addEventListener('click', () => filho.classList.toggle('mostrar'))
     })
+
+    function newTopic() {
+    const node = document.getElementById("bluredTopic");
+    const clone = node.cloneNode(true);
+    document.getElementById("thankYou").appendChild(clone);
+    }
     </script>
 </body>
 </html>

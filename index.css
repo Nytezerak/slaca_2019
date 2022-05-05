@@ -341,7 +341,7 @@ ul li{
 }
 
 .bodyArticleIcons{
-    margin: 0 30%;
+    margin: 30px 30%;
     display: flex;
     justify-content: space-around;
 }
@@ -413,6 +413,7 @@ margin: -16px 0 32px 0;
 }
 
 .newTopic{
+    text-align: left;
     margin-top: 15px;
     padding: 17px 25px;
     border: 1px solid #E7E7E7;
@@ -552,10 +553,21 @@ margin: -16px 0 32px 0;
 .thankYou{
     text-align: center;
     margin-bottom: 16px;
-    display: none;
+    /*display:none;*/
+}   
+
+.waitingFeedback{
+    text-align: center;
+    margin: -150px auto 100px auto;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #707070;
 }
-
-
 
 .textoEscondido{
     display:none;
@@ -590,7 +602,7 @@ margin: -16px 0 32px 0;
 }
 
 #newTopic{
-    display: none;
+    /*display: none;*/
 }
 
 
