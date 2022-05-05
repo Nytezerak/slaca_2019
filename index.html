@@ -118,7 +118,7 @@
         <p class="bodyArticleHeader">Resumo</p>
         <div class="bodyArticleText">    
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.
-                    <a onclick="myFunction()" id="dots" class="textDecoration mostrar">ver mais</a>
+                    <a onclick="mostrarMaisMenos()" id="dots" class="textDecoration mostrar">ver mais</a>
                     <span id="more" class="textoEscondido"><br><br>            
                     Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.
                     <br><br>  
@@ -134,7 +134,8 @@
     <div class="bodyArticleBox">
         <p class="bodyArticleHeader">Discussões</p>
             <div class="bodyArticleText ">
-            <section>
+    <!--Bloco inicial das perguntas e respostas-->
+            <section id="blocoInicial">
                 <p class="textDecoration">Compartilhe suas ideias ou dúvidas com os autores!</p>
                 <div class="bodyArticleIcons">
                     <img src="./img/icone1.png">
@@ -143,16 +144,13 @@
                 </div>
                 <p style="padding-top: 35px;">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
                 <div class="bodyArticleButtonDiv">
-                    <button class="bodyArticleButton">
+                    <button onclick="abreForm()" class="bodyArticleButton">
                         <img src="./img/plusIcon.svg"> criar tópico
                     </button>
                 </div>
                 <hr class="hrStyle">
             </section>
-
                         
-          
-            
     <!--Bloco para enviar um novo tópico para avaliação-->
             <section id="newTopic">
                 <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
@@ -173,12 +171,12 @@
                             <img src="./img/bold.svg">
                             <img src="./img/italic.svg">
                         </div>
-                        <button onclick="newTopic()" class="bodyArticleButton">Enviar</button>
+                        <button onclick="novoTopico()" class="bodyArticleButton">Enviar</button>
                     </div>
                 </div>
             </section>
 
-            <!--Bloco de enviado com sucesso-->
+<!--Bloco de enviado com sucesso-->
                 <section id="thankYou" class="thankYou">
                     <p class="textDecoration">Seu tópico foi enviado com sucesso! :D</p>
                     <p class="newTopicQuestion">
@@ -188,6 +186,15 @@
                         Descubra outros trabalhos!
                     </a>
     
+                    <div class="bodyArticleButtonDiv">
+                        <button onclick="abreForm()" class="bodyArticleButton">
+                            criar novo tópico
+                        </button>
+                    </div>
+                    <hr class="hrStyle">
+                </section>
+<!--Elemento embaçado original-->
+                <div class="hideBluredElement">
                     <div id="bluredTopic">
                     <div class="newTopic blurTopic">
                         <p class="textDecoration pointer">Assunto da pergunta aparece aqui</p>
@@ -207,10 +214,12 @@
                         <p>Aguardando feedback dos autores</p>
                         <li>Editar tópico</li>
                     </div>
+                    </div>
                 </div>
-                </section>
-    <!--Bloco de perguntas com respostas-->
-            <div class="newTopic pointer" onclick="answerMe()">
+
+<!--Bloco de perguntas com respostas-->
+    <div id="newBluredTopic"><!--Elemento vazio para alinhar novos tópicos--></div>
+            <div class="newTopic pointer">
                 <p class="textDecoration pointer">Assunto da pergunta aparece aqui</p>
                 <p class="newTopicName pointer">Carlos Henrique Santos</p>
                 <p class="newTopicQuestion pointer">
@@ -231,7 +240,7 @@
                     </p>
                 </div>
             </div>
-            <div class="newTopic pointer" onclick="answerMe()">
+            <div class="newTopic pointer" onclick="abrirRespostas()">
                 <p class="textDecoration pointer">Assunto da pergunta aparece aqui</p>
                 <p class="newTopicName pointer">Carlos Henrique Santos</p>
                 <p class="newTopicQuestion pointer">
@@ -287,30 +296,47 @@
 </footer>
 
 <script>
-    function myFunction() {
-      var dots = document.getElementById("dots");
+    function mostrarMaisMenos() {
+      const dots = document.getElementById("dots");
       dots.classList.toggle("mostrar")
-      var moreText = document.getElementById("more");
+      const moreText = document.getElementById("more");
       moreText.classList.toggle("mostrar");
-    
     }
+ 
 
-    function answerMe() {
-      var hiddenDiv = document.getElementById("topic2")
+    function abrirRespostas() {
+      const hiddenDiv = document.getElementById("topic2")
       hiddenDiv.classList.toggle("mostrar")
     }
 
     const itens = document.querySelectorAll('.newTopic')
-    console.log('NewTopic ok!')
     itens.forEach(item => {
     const filho = item.querySelector('.topic2')
     item.addEventListener('click', () => filho.classList.toggle('mostrar'))
     })
 
-    function newTopic() {
+    function abreForm(){
+        const esconderInicio = document.getElementById("blocoInicial");
+        esconderInicio.style.display = "none";
+
+        const esconderAgradecimento = document.getElementById("thankYou");
+        esconderAgradecimento.style.display = "none";
+
+        const apareceForm = document.getElementById("newTopic");
+        apareceForm.style.display = "block";
+        
+    }
+
+    function novoTopico() {
     const node = document.getElementById("bluredTopic");
     const clone = node.cloneNode(true);
-    document.getElementById("thankYou").appendChild(clone);
+    document.getElementById("newBluredTopic").appendChild(clone);
+
+    const agradecimento = document.getElementById("thankYou");
+    agradecimento.style.display = "block";
+
+    const escondeForm = document.getElementById("newTopic");
+    escondeForm.style.display = "none"
     }
     </script>
 </body>

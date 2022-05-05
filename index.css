@@ -135,9 +135,30 @@ main{
 .dropdown-toggle::after {
     padding-left: -3px;
 }
+.quicksand{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.fontWeight400{
+    font-weight: 400;
+}
+
+.fontWeight500{
+    font-weight: 500;
+}
+
+.fontWeight700{
+    font-weight: 700;
+}
+
+.fontWeight900{
+    font-weight: 900;
+}
 
 .dpdText{
-    font-size: 14px;
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
@@ -215,6 +236,11 @@ main{
     text-align: center;
 }
 
+.roboto{
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
 .mainHeaderText{
     font-family: 'Roboto';
     font-style: normal;
@@ -250,7 +276,6 @@ main{
     font-weight: 500;
     font-size: 14px;
     line-height: 25px;
-    /* identical to box height, or 179% */
 
     text-align: right;
     letter-spacing: 0.05em;
@@ -273,7 +298,6 @@ ul li{
     font-weight: 400;
     font-size: 12px;
     line-height: 120%;
-    /* or 14px */
 
     letter-spacing: 0.02em;
 
@@ -290,7 +314,6 @@ ul li{
     font-weight: 500;
     font-size: 20px;
     line-height: 25px;
-    /* identical to box height, or 125% */
 
     display: flex;
     align-items: center;
@@ -421,12 +444,13 @@ margin: -16px 0 32px 0;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
 }
 
+
 .blurTopic{
     position: relative;
 }
 
 .blurTopic>*{
-    filter: blur(2px);
+    filter: blur(3px);
 }
 
 .blurTopic::after{
@@ -481,8 +505,6 @@ margin: -16px 0 32px 0;
 .commentBlockInative{
     display: none;
 }
-
-
 
 .autor{
     background: #F8F8F8;
@@ -549,11 +571,16 @@ margin: -16px 0 32px 0;
     border-radius: 2px;
 }
 
+.superUltraSecret{
+    position: fixed;
+    top: -5000px;
+    left: -5000px;
+}
 
 .thankYou{
     text-align: center;
     margin-bottom: 16px;
-    /*display:none;*/
+    display:none;
 }   
 
 .waitingFeedback{
@@ -601,8 +628,13 @@ margin: -16px 0 32px 0;
     border-radius: 3px;
 }
 
+.hideBluredElement{
+    position: absolute;
+    top: -5000px;
+}
+
 #newTopic{
-    /*display: none;*/
+    display: none;
 }
 
 
