@@ -472,8 +472,9 @@ ul li {
   position: relative;
 }
 
+
 .blurTopic > * {
-  filter: blur(3px);
+  filter: blur(2px);
 }
 
 .blurTopic::after {

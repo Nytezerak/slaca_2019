@@ -271,7 +271,6 @@
                 <input
                   type="text"
                   id="subject"
-                  name="subject"
                   class="greyBorder"
                   placeholder="Defina um tópico sucinto para notificar os autores..."
                 />
@@ -279,12 +278,11 @@
                 <br />
                 <label for="content" class="newTopicName">Conteúdo</label>
                 <br />
-                <textarea
+                <textarea                  
                   id="content"
-                  name="content"
                   class="greyBorder"
                 ></textarea>
-
+                
                 <div
                   class="topBarP bodyArticleIcons flex space_between backgroung_grey"
                 >
@@ -329,11 +327,11 @@
             <div class="hideBluredElement">
               <div id="bluredTopic">
                 <div class="newTopic blurTopic">
-                  <p class="textDecoration pointer roboto font_weight700 font_size_18 text_orange">
+                  <p id="newTopicSubject" class="textDecoration pointer roboto font_weight700 font_size_18 text_orange">
                     Assunto da pergunta aparece aqui
                   </p>
                   <p class="newTopicName pointer">Carlos Henrique Santos</p>
-                  <p class="newTopicQuestion pointer">
+                  <p id="newTopicContent" class="newTopicQuestion pointer">
                     Comecinho da pergunta aparece aqui resente relato
                     inscreve-se no campo da análise da dimensão e impacto de
                     processo formativo situado impacto de processo formativo
@@ -348,8 +346,8 @@
                     <div class="topicIcon heart padding_left_3px">
                       <i class="fa-solid fa-heart"></i>
                     </div>
-                    <p class="padding_left_3px">1 like</p>
-                    <p class="padding_left_3px">1 resposta</p>
+                    <p class="padding_left_3px">0 like</p>
+                    <p class="padding_left_3px">0 resposta</p>
                   </div>
                 </div>
                 <div class="waitingFeedback position_relative align_center quicksand font_weight700">
@@ -515,6 +513,14 @@
       }
 
       function novoTopico() {
+        const assunto = document.getElementById("subject").value
+        const conteudo = document.getElementById("content").value
+//newTopicSubject & newTopicContent
+        const novoAssunto = document.getElementById("newTopicSubject")
+        novoAssunto.innerHTML = assunto;
+        const novoConteudo = document.getElementById("newTopicContent")
+        novoConteudo.innerHTML = conteudo;
+
         const node = document.getElementById("bluredTopic");
         const clone = node.cloneNode(true);
         document.getElementById("newBluredTopic").appendChild(clone);
