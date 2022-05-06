@@ -268,7 +268,7 @@
                 >
                 <br />
 
-                <input
+                <input  
                   type="text"
                   id="subject"
                   class="greyBorder"
@@ -522,7 +522,7 @@
       function novoTopico() {
         const assunto = document.getElementById("subject").value
         const conteudo = document.getElementById("content").value
-
+        if(assunto != 0){
         const novoAssunto = document.getElementById("newTopicSubject")
         novoAssunto.innerHTML = assunto;
         const novoConteudo = document.getElementById("newTopicContent")
@@ -537,7 +537,10 @@
 
         const escondeForm = document.getElementById("newTopic");
         escondeForm.style.display = "none";
+      }else{
+        alert("Preencha os campos!")
       }
+    }
     </script>
   </body>
 </html>

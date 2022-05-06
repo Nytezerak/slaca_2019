@@ -580,10 +580,11 @@ ul li {
 }
 
 .waitingFeedback {
-  margin: -14% auto 7% auto;
   font-size: 16px;
   line-height: 20px;
   color: #707070;
+  margin-top: -120px;
+  margin-bottom: 50px;  
 }
 
 .textoEscondido {
