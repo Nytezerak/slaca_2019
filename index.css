@@ -20,16 +20,9 @@ body {
 
 .headerSlaca {
   background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
-  height: 68px;
   font-size: 30px;
-  text-align: center;
-  position: absolute;
   color: white;
-  font-style: normal;
-  font-weight: 700;
   font-size: 30px;
-  z-index: 1;
-  position: relative;
   padding-top: 15px;
 }
 
@@ -54,15 +47,11 @@ body {
 .menuItemActive {
   background: #fdf1eb;
   width: 240px;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 .menuItemActive::before {
   content: " ";
-  margin: -0px 24px 0 -24px;
+  margin: -8px 24px 0 -24px;
   height: 38px;
   width: 10px;
   display: inline-block;
@@ -71,7 +60,6 @@ body {
 
 header {
   width: auto;
-  height: 68px;
 }
 
 hr {
@@ -88,7 +76,6 @@ main {
 
 .topBar {
   background-color: #fdf1eb;
-  height: 68px;
   padding: 0 5%;
 }
 
@@ -101,8 +88,6 @@ main {
 .topBarP {
   margin-bottom: 0;
   color: hsla(0, 11%, 40%, 1);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .dropdown {
@@ -143,10 +128,22 @@ main {
   line-height: 18px;
 }
 
+.font_size_12{
+  font-size: 12px;
+}
+
+.letter_spacing_02{
+  letter-spacing: 0.02em;
+}
 .font_size_14 {
   font-style: normal;
   font-size: 14px;
   line-height: 16px;
+}
+
+.font_size_18{
+  font-size: 18px;
+  line-height: 21px;  
 }
 
 .font_size_22 {
@@ -183,6 +180,10 @@ main {
   justify-content: space-between;
 }
 
+.justify_flex_start{
+  justify-content: flex-start;
+}
+
 .space_around {
   justify-content: space-around;
 }
@@ -205,10 +206,6 @@ main {
   width: 70%;
 }
 
-.align_center {
-  text-align: center;
-}
-
 .width_90 {
   width: 90%;
 }
@@ -217,7 +214,7 @@ main {
   margin: 15px 0 -15px 5%;
 }
 
-.position_relative {
+.position_relative{
   position: relative;
 }
 
@@ -226,6 +223,7 @@ main {
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
   border-radius: 4px;
   border: none;
+  position: relative;
 
   padding: 7px 14px;
   z-index: 1;
@@ -250,6 +248,48 @@ main {
 .padding_top_minus15 {
   padding-top: -15px;
 }
+
+.width_18p{
+  width: 18%;
+}
+
+.align_right{
+  text-align: right;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.height_68px{
+  height: 68px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.text_orange{
+  color: hsla(21, 83%, 58%, 1);
+}
+
+.grey_border_box{
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.margin_top_15{
+  margin-top: 15px;
+}
+
+.margin_top_30{
+  margin-top: 30px;
+}
+
+.padding_top_35px{
+  padding-top: 35px;
+}
 /*//////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////Base classes/////////////////////////////*/
@@ -267,13 +307,9 @@ main {
 
 .welcome1 {
   margin: 15px 0 0 auto;
-  size: 14px;
-  text-align: right;
 }
 
 .welcome2 {
-  font-style: normal;
-  font-size: 12px;
   line-height: 15px;
   margin: 1px 0 17px 0;
 }
@@ -294,15 +330,12 @@ main {
 }
 
 .mainHeaderButton button {
-  margin: 0 0px 12px 5px;
+  margin: 0 0 12px 5px;
   background: #ed7839;
   border-radius: 4px;
   border: none;
   padding: 6px 12px;
   color: #ffffff;
-
-  align-items: center;
-  text-align: center;
 }
 
 .mainHeaderText {
@@ -344,10 +377,6 @@ ul li {
   border: 1px solid #ececec;
   box-sizing: border-box;
   border-radius: 3px 3px 3px 3px;
-  font-size: 12px;
-  line-height: 120%;
-
-  letter-spacing: 0.02em;
 
   color: #5c5c5c;
   width: 30%;
@@ -380,17 +409,14 @@ ul li {
 }
 
 .bodyArticleBox {
-  border: 1px solid #ececec;
-  box-sizing: border-box;
-  border-radius: 3px 3px 0px 0px;
+  
   margin-bottom: 30px;
 }
 
+
 .bodyArticleHeader {
   background: #fdf1eb;
-  border: 1px solid #ececec;
-  box-sizing: border-box;
-  border-radius: 3px 3px 0px 0px;
+
   padding: 10px 15px;
 
   font-family: "Roboto";
@@ -409,20 +435,10 @@ ul li {
 }
 
 .bodyArticleButton {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 700;
   font-size: 15px;
   line-height: 16px;
 
-  text-align: center;
-
   color: #ffffff;
-}
-
-.bodyArticleButtonDiv {
-  text-align: center;
-  z-index: 5;
 }
 
 .hrStyle {
@@ -432,14 +448,7 @@ ul li {
 }
 
 .textDecoration {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
   text-decoration: none;
-
-  color: #ed7839;
 }
 
 .textDecoration.mostrar {
@@ -481,16 +490,11 @@ ul li {
 }
 
 .newTopicName {
-  font-size: 12px;
   line-height: 15px;
-
   color: #5c5c5c;
-
   margin-bottom: 10px;
 }
-.pointer {
-  cursor: pointer;
-}
+
 .commentBlock {
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
@@ -530,19 +534,8 @@ ul li {
 }
 
 .newTopicQuestion {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-
   color: #4d4d4d;
-
   margin-bottom: 11px;
-}
-
-.newTopicIcons {
-  width: 18%;
 }
 
 .newTopicInsert {
@@ -574,6 +567,7 @@ ul li {
   height: 22px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
   border-radius: 2px;
+  margin-top: -3px;
 }
 
 .superUltraSecret {
@@ -583,23 +577,21 @@ ul li {
 }
 
 .thankYou {
-  text-align: center;
   margin-bottom: 16px;
   display: none;
 }
 
 .waitingFeedback {
-  text-align: center;
   margin: -150px auto 100px auto;
   font-size: 16px;
   line-height: 20px;
-
   color: #707070;
 }
 
 .textoEscondido {
   display: none;
 }
+
 .textoEscondido.mostrar {
   display: inline;
 }
@@ -608,9 +600,10 @@ ul li {
   display: -webkit-inline-box;
 }
 
-.footerLogo {
+.imgResponsive{
   width: 100%;
-  text-align: right;
+  height: auto;
+  padding-left: 270px;
 }
 
 .hideBluredElement {
@@ -621,6 +614,7 @@ ul li {
 #newTopic {
   display: none;
 }
+
 
 @media screen and (min-width: 1258px) {
   .menuButton {
@@ -634,7 +628,7 @@ ul li {
     margin-left: 5%;
   }
 
-  .mainBodyTop {
+  .mobile_inline{
     display: inline;
   }
 
@@ -712,5 +706,9 @@ ul li {
   .details {
     width: 100%;
     border-radius: 3px;
+  }
+
+  .imgResponsive{
+    padding-left: 0;
   }
 }
