@@ -166,6 +166,8 @@
         <div class="bodyArticleBox grey_border_box">
           <p class="bodyArticleHeader grey_border_box">Resumo</p>
           <div
+          onclick="mostrarMaisMenos()"
+                id="dots"
             class="bodyArticleText margin15 font_size_14 font_weight400 quicksand flex space_between"
           >
             <p>
@@ -178,10 +180,8 @@
               id leo condimentum lobortis et non lorem. Sed id nisl metus.
               Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros
               vestibulum.
-              <a
-                onclick="mostrarMaisMenos()"
-                id="dots"
-                class="textDecoration pointer roboto font_weight700 font_size_18 text_orange"
+              <a                
+                class="textDecoration pointer roboto font_weight700 font_size_18 text_orange vermais"
                 ><b>ver mais</b></a
               >
               <span id="more" class="textoEscondido pointer"
@@ -217,13 +217,6 @@
                 sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec
                 varius ipsum purus, ut vehicula purus placerat vitae. Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit.
-
-                <a
-                  onclick="mostrarMaisMenos()"
-                  id="verMenos"
-                  class="textDecoration mostrar roboto font_weight700 font_size_18 text_orange"
-                  >ver menos</a
-                >
               </span>
             </p>
           </div>

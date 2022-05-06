@@ -455,7 +455,7 @@ ul li {
   display: inline;
 }
 
-#dots:hover {
+.verMais:hover {
   color: #ed7839;
 }
 
