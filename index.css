@@ -633,6 +633,11 @@ ul li {
     display: inline;
   }
 
+  .mobile_width{
+    width: 33%;
+  }
+
+
   .topBar {
     height: auto;
     width: 110%;
@@ -649,6 +654,7 @@ ul li {
 
   .mobileDpdPlusWelcome {
     display: flex;
+    justify-content: space-between;
   }
 
   .lateralMenu {
@@ -656,15 +662,16 @@ ul li {
   }
 
   .menuButton {
-    margin: 85vh 0 0 80vw;
+    margin: 85vh 0 0 75vw;
     position: fixed;
     z-index: 1;
     color: #e7e7e7;
     background-color: #ed7839;
-    border-radius: 30px;
-    width: 50px;
-    height: 50px;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
     border: #ed7839;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   }
 
   .topBarP {
@@ -711,5 +718,11 @@ ul li {
 
   .imgResponsive{
     padding-left: 0;
+  }
+
+  .lateralMenu.mostrarMenu{
+    z-index: 1000;
+    margin-left: 0;
+    
   }
 }
