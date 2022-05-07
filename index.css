@@ -10,7 +10,6 @@ body {
 }
 
 .lateralMenu {
-  background-color: #ffffff;
   float: left;
   width: 240px;
   height: 100%;
@@ -188,6 +187,10 @@ main {
   justify-content: space-around;
 }
 
+.width_100px{
+  width: 100px;
+}
+
 .margin_30px_30percent {
   margin: 30px 30%;
 }
@@ -290,6 +293,10 @@ main {
 .padding_top_35px {
   padding-top: 35px;
 }
+
+.background_white{
+  background: #ffffff;
+}
 /*//////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////Base classes/////////////////////////////*/
@@ -327,6 +334,10 @@ main {
 .mainHeaderButton {
   float: right;
   align-self: self-end;
+}
+
+.border_none {
+  border: 0 !important;
 }
 
 .mainHeaderButton button {
@@ -508,7 +519,7 @@ ul li {
 .commentBlock div {
   padding: 7px;
 
-  background: #f8f8f8;
+
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
   border-radius: 0px;
@@ -557,7 +568,7 @@ ul li {
 }
 
 .fa-heart {
-  padding: 3px 6px;
+  padding: 4px 3px 2px 3px;
 }
 
 .heart {
