@@ -181,9 +181,8 @@
               Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros
               vestibulum.
               <a                
-                class="textDecoration pointer roboto font_weight700 font_size_18 text_orange vermais"
-                ><b>ver mais</b></a
-              >
+                class="textDecoration pointer roboto font_weight700 font_size_18 text_orange ver_mais"
+                id="ver_mais"><span>ver mais</span></a>
               <span id="more" class="textoEscondido pointer"
                 ><br /><br />
                 Fusce vitae luctus dui. Donec id euismod mauris, in volutpat
@@ -494,7 +493,8 @@
         dots.classList.toggle("mostrar");
         const moreText = document.getElementById("more");
         moreText.classList.toggle("mostrar");
-        
+        const esconderBotao = document.getElementById("ver_mais");
+        esconderBotao.classList.toggle("esconder")
       }
 
       function abrirRespostas() {

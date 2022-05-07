@@ -449,8 +449,9 @@ ul li {
   text-decoration: none;
 }
 
-.textDecoration.mostrar {
-  display: inline;
+
+.ver_mais.esconder {
+  display: none;
 }
 
 .verMais:hover {
@@ -588,6 +589,10 @@ ul li {
 }
 
 .textoEscondido {
+  display: none;
+}
+
+#verMais.esconder{
   display: none;
 }
 
